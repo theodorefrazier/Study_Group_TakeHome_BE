@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS groups_dev;
 CREATE DATABASE groups_dev;
 
-\c groups_devs
+\c groups_dev
 
 CREATE TABLE groups (
     id SERIAL PRIMARY KEY,
