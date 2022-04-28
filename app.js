@@ -1,0 +1,1 @@
+console.log("This is the begining of my Study App!")
