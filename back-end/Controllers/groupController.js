@@ -1,12 +1,12 @@
 //Require the express APP
-const express = require("express");
+const express = require("express")
 
 //
 const groups = express.Router();
 
 // Accessing Queries for Groups => returning an object
 
-const {retriveAllGroups} = require("../Queries/groups.js")
+import { retriveAllGroups } from ("../Queries/groups.js");
 
 
 
@@ -24,4 +24,4 @@ groups.get("/", async (request, response) => {
 });
 
 
-module.exports = groups
+export default = groups
