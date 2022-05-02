@@ -9,4 +9,5 @@ CREATE TABLE groups (
     city TEXT,
     state TEXT,
     events TEXT,  
+    is_free boolean,
 )

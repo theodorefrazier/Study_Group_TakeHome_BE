@@ -9,6 +9,12 @@ const app = express() // => Configure the express application
 app.use(cors());
 app.use(express.json()); // -> Parson incoming JSON
 
+// -----> Initialize a Route
+
+app.get("/", (request, response) => {
+    response.send("Hi - this route is working")
+})
+
 
 // EXPORT Application
 
