@@ -15,6 +15,11 @@ app.get("/", (request, response) => {
     response.send("Hi - this route is working")
 })
 
+//404
+app.get("*", (request, response) => {
+    response.json({ Error: "Data Not Found" })
+})
+
 
 // EXPORT Application
 

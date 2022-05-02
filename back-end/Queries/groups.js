@@ -1,8 +1,8 @@
 const db = require("../db/dbConfig.js");
 
-const getAllGroups = async () => {
+const retrieveAllGroups = async () => {
     try {
-        const allGroups = await db.any("SELECT * FROM groups");
+        const allGroups = await db.any("SELECT * FROM groups"); // * get all
         return allGroups;
     } catch (error) {
         return error;
@@ -13,5 +13,5 @@ const getAllGroups = async () => {
 //Begin exports here 
 
 module.exports = {
-    getAllGroups,
+    retrieveAllGroups,
 }
