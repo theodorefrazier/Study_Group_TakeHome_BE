@@ -1,7 +1,13 @@
 // Create Dependecies 
 const cors = require("cors"); // => Cors
 
-const express = require("express") // => Express
+const express = require("express"); // => Express
+
+
+// Adding the controller 
+
+const groupController = require("./Controllers/groupController")
+
 
 const app = express() // => Configure the express application 
 
@@ -14,6 +20,10 @@ app.use(express.json()); // -> Parson incoming JSON
 app.get("/", (request, response) => {
     response.send("Hi - this route is working")
 })
+
+// --- > Make use of controller so /groups will work
+
+app.use("/groups", groupController)
 
 //404
 app.get("*", (request, response) => {

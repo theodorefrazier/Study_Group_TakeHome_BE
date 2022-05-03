@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS groups_dev;
-CREATE DATABASE groups_dev;
+DROP DATABASE IF EXISTS groups;
+CREATE DATABASE groups;
 
-\c groups_dev
+\c groups
 
 CREATE TABLE groups (
     id SERIAL PRIMARY KEY,
@@ -9,5 +9,5 @@ CREATE TABLE groups (
     city TEXT,
     state TEXT,
     events TEXT,  
-    is_free boolean,
+    is_free boolean
 )
