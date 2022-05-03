@@ -27,7 +27,7 @@ app.use("/groups", groupController)
 
 //404
 app.get("*", (request, response) => {
-    response.json({ Error: "Data Not Found" })
+    response.json({ Error: "Data Not Found!!" })
 })
 
 
