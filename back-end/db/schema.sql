@@ -11,3 +11,10 @@ CREATE TABLE groups (
     events TEXT,  
     is_free boolean
 )
+
+DROP TABLE IF EXISTS events;
+
+CREATE TABLE events {
+    eventID SERIAL PRIMARY KEy,
+    name TEXT
+}

@@ -72,4 +72,28 @@ groups.put("/:groupID", async (request, response) => {
 
 // Events start here
 
+groups.get("/:groupID/events", async (request, response) => {
+  const { groupID } = request.params;
+  try {
+    const groupEvent = await getEventByGroupID(groupID);
+    console.log(groupEvent);
+    response.status(200).send(group);
+  } catch (error)  {
+    response.status(404).send({ error: "Error"})
+  }
+}) 
+
+//
+
+groups.post("/:groupID/events", async (request, response) => {
+  let event = request.body;
+  try {
+    const newEvent = await createEvent(event);
+    response.status(200).send(newEvent);   
+  } catch (error) {
+    response.status(404).send({ error: "Error!"})
+  }
+})
+
+
 module.exports = groups;
