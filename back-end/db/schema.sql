@@ -10,11 +10,11 @@ CREATE TABLE groups (
     state TEXT,
     events TEXT,  
     is_free boolean
-)
+);
 
 DROP TABLE IF EXISTS events;
 
-CREATE TABLE events {
+CREATE TABLE events (
     eventID SERIAL PRIMARY KEy,
     name TEXT
-}
+);
