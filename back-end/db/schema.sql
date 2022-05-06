@@ -9,7 +9,8 @@ CREATE TABLE groups (
     city TEXT,
     state TEXT,
     events TEXT,  
-    is_free boolean
+    is_free boolean,
+    active boolean
 );
 
 DROP TABLE IF EXISTS events;
